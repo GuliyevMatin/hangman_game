@@ -1,0 +1,1 @@
+let alfabet = "abcdefghijklmnopqrstuvwxyz"
