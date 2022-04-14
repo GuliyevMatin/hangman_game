@@ -12,29 +12,84 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./index.css" />
     <title>Hello, world!</title>
   </head>
   <body>
-    
-      <header>
-        <div class="header">
-          <h1>HANGMAN</h1>
-          <p>80s Style</p>
-        </div>
-      </header>
+    <header>
+      <div class="header">
+        <h1>HANGMAN</h1>
+        <p>80s Style</p>
+      </div>
+    </header>
+
+    <div class="container">
       <section>
         <div class="wrapper">
           <div class="row">
-            <div class="col-lg-6 offset-5 myAlphabet"></div>
+            <div class="col-lg-12 myAlphabet"></div>
           </div>
         </div>
       </section>
-  
+      <section>
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="categoryTitle text-center text-white mt-4" id="selectCategoryWords"></p>
+            <p id="word" class="text-center text-white"></p>
+            <p id="lives" class="text-center text-white">You have 9 lives</p>
+            <p id="clue" class="text-center text-white">New york s nice city</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="hangMan" id="hangman">
+             
+                <span class="manSpan"></span>
+                <span class="manSpan1"></span>
+                <span class="manSpan2"></span>
+                <span class="manSpan3"></span>
+                <span class="manSpan4"></span>
+                <span class="manSpan5"></span>
+                <span class="manSpan6"></span>
+                <span class="manSpan7"></span>
+                <span class="manSpan8"></span>
+                <span class="manSpan9"></span>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <select class="form-select" id="category" aria-label="Default select example">
+                <option selected disabled value="">Open this select menu</option>
+            
+              </select>
+            </div>
+          </div>
+        <div class="col-lg-5">
+          <div class="hint" id="hint">
+            <button class="btn w-100">Hint</button>
+          </div>
+        </div>
+        </div>
+      </footer>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
