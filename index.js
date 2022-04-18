@@ -10,12 +10,12 @@ let hint = document.querySelector("#hint");
 let myAlphabet = document.querySelector(".myAlphabet");
 let myCategory = {
   cities: [
-    { name: "Paris", explain: "Eiffel tower" },
+    // { name: "Paris", explain: "Eiffel tower" },
     { name: "New York", explain: "America's Most Populous City" },
-    { name: "Budapest", explain: "The Capital of the Hungary" },
-    { name: "Sydney", explain: "A city in Australia" },
-    { name: "London", explain: "Big ben tower" },
-    { name: "Tokyo", explain: "The city ​​famous for sushi" },
+    // { name: "Budapest", explain: "The Capital of the Hungary" },
+    // { name: "Sydney", explain: "A city in Australia" },
+    // { name: "London", explain: "Big ben tower" },
+    // { name: "Tokyo", explain: "The city ​​famous for sushi" },
   ],
   football: [
     // { name: "Fenerbahce", explain: "The first team of the Turkey" },
@@ -66,8 +66,10 @@ function getRandomWords(selectCategory) {
   console.log(randomWord);
   if (randomWord.indexOf(" ") !== -1) {
     let spaceWord = randomWord.split(" ");
+    console.log(spaceWord);
     let newWord = spaceWord.map((item) => "_".repeat(item.length));
     word.innerHTML = newWord.join(" ");
+    
   } else {
     let underLine = "_";
     word.innerHTML = `${underLine.repeat(randomWord.length)}`;
@@ -79,18 +81,12 @@ function getRandomWords(selectCategory) {
 
 function verifyLetter(value) {
   window.onkeypress = (e) => {
-    if (value.includes(e.key.toLowerCase())) {
-    //   let result = value.indexOf(e.key.toLowerCase());
-    //   console.log(result);
-    //   let underline = word.textContent;
-
-    //   underline = underline.split("");
-    //   underline[result] = e.key.toLowerCase();
-    //   underline = underline.join("");
-
-    //   word.innerHTML = underline;
-    }
-  };
+    for(let i = 0; i < value.length; i++) {
+      if (e.key === value[i]) {
+        word.textContent[i].replaceAll(word.textContent[i],e.key)
+      }
+  }
+}
 }
 
 // //choose category callback
@@ -126,3 +122,5 @@ function verifyLetter(value) {
 //      }
 //   }
 // }
+
+
