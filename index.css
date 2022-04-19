@@ -45,9 +45,12 @@ body {
   display: inline-block;
   background-color: #fff;
   margin-top: 100px;
-  margin-right: 5px;
   padding: 10px 15px;
   border-radius: 10px;
+}
+
+.wrongWords{
+background-color: red;
 }
 .categoryTitle {
   /* display: none; */
@@ -65,14 +68,15 @@ body {
   position: relative;
   margin: 0 auto;
 }
-/* .man{
-    position: relative;
-} */
 
-.hangMan span:not(:nth-child(5)){
+
+.hangMan span{
     background-color: #fff;
     display: inline-block;
     position: absolute;
+}
+.hangMan span:not(:first-child){
+ display:none;
 }
 .manSpan {
   bottom: 10%;
@@ -82,25 +86,25 @@ body {
   height: 2px;
   background-color: #fff;
 }
-.manSpan1{
+.manSpan9{
     top: 30%;
     left: 20%;
     height:60%;
     width: 2px;
 }
-.manSpan2{
+.manSpan8{
     top: 30%;
     left: 20%;
     height:2px;
     width: 60%;
 }
-.manSpan3{
+.manSpan7{
     top: 30%;
     left: 50%;
     height:10%;
     width: 2px;
 }
-.manSpan4{
+.manSpan6{
     display: inline-block;
     position: absolute;
     top:40%;
@@ -118,7 +122,7 @@ body {
     height:17%;
     width: 2px;
 }
-.manSpan6{
+.manSpan4{
     top: 53%;
     left: 38%;
     width: 13%;
@@ -126,7 +130,7 @@ body {
     transform: rotate(30deg);
 }
 
-.manSpan7{
+.manSpan3{
     top: 53%;
     left: 49%;
     width: 13%;
@@ -134,7 +138,7 @@ body {
     transform: rotate(145deg);
 }
 
-.manSpan8{
+.manSpan2{
     top: 70%;
     left: 38%;
     width: 13%;
@@ -142,7 +146,7 @@ body {
     transform: rotate(150deg);
 }
 
-.manSpan9{
+.manSpan1{
     top: 69.5%;
     left: 50%;
     width: 13%;
@@ -152,4 +156,12 @@ body {
 
 .hint{
     background-color: #fff;
+}
+
+#gameWinLose{
+  text-align: center;
+
+  font-size:24px;
+  background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
